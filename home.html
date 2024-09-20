@@ -17,25 +17,29 @@
         <div class="mockup-phone">
             <div class="camera"></div>
             <div class="display">
-              <div class="artboard artboard-demo phone-3">
+              <div class="artboard artboard-demo phone-4 pt-10">
                 <!-- Available balance -->
                 <div class="stats shadow">
                     <div class="stat">
-                      <div class="stat-value" id="account-balance">9400</div>
-                      <div class="stat-desc">Available Balance</div>
+                      <div class="stat-desc font-bold text-xl">Available Balance</div>
+                      <div class="stat-value text-center text-5xl text-green-500" id="account-balance">9400</div>
+                      
                     </div>
                   </div>
                   <div class="divider"></div>
                   <!-- User aCTIOn Btn -->
-                   <div>
-                    <button id="show-addmoney-btn" class="btn btn-lg">Add money</button>
-                    <button id="btn-show-cashout" class="btn btn-lg">Cash out</button>
+                   <div class="grid grid-cols-2">
+                    <button id="show-addmoney-btn" class="btn btn-lg m-2">Add money</button>
+                    <button id="btn-show-cashout" class="btn btn-lg m-2">Cash out</button>
+                    <button id="btn-show-transaction" class="btn btn-lg m-2">Transaction</button>
+                    <button id="btn-show-paybill" class="btn btn-lg m-2">Pay Bill</button>
                    </div>
                    <div class="divider"></div>
                    <!-- Add money form start -->
                    <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                       <div class="form-control">
+                        <p id="errorMessage" class="text-center font-bold" style="color: red;"></p>
                         <label class="label">
                           <span class="label-text">Amount</span>
                         </label>
@@ -58,6 +62,7 @@
                      <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                           <div class="form-control">
+                            <p id="errorMessage2" class="text-center font-bold" style="color: red;"></p>
                             <label class="label">
                               <span class="label-text">Amount</span>
                             </label>
@@ -77,14 +82,24 @@
                       </div>
 
                       <!-- cash Out end -->
+                       <!-- transactions start -->
+                        <div id="transaction-history" class="hidden text-center">
+                          <h2 class="text-4xl text-center font-bold">Transaction History</h2>
+                          <div id="transaction-container" class="">
+
+                          </div>
+                        </div>
+                        <!-- transaction end -->
 
 
               </div>
             </div>
           </div>
     </main>
-    <script src="home.js"></script>
-    <script src="cashout.js"></script>
-    <script src="features.js"></script>
+    <script src="JS/home.js"></script>
+    <script src="JS/cashout.js"></script>
+    <script src="JS/features.js"></script>
+    <script src="JS/utilities.js"></script>
+    <script src="JS/transaction.js"></script>
   </body>
 </html>
