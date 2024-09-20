@@ -1,6 +1,4 @@
-document
-  .getElementById("btnCashout")
-  .addEventListener("click", function (event) {
+document.getElementById("btnCashout").addEventListener("click", function (event){
     event.preventDefault();
 
     const cashOutInput = document.getElementById("cashout-input").value;
